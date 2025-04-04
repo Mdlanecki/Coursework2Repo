@@ -15,8 +15,8 @@ public class MainController {
 @Autowired
 TableNameRepo tableNameRepo;
 
-    @GetMapping("/getData") //change addStudent
-    public List<TableName> getData(){ //change table name
+    @GetMapping("/getData")
+    public List<TableName> getData(){
         return tableNameRepo.findAll();
     }
 

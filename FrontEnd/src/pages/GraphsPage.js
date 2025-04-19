@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Legend, Label, ResponsiveContainer } from 'recharts';
 import { useNavigate } from "react-router-dom";
+import './WebApp.css';
 
 function GraphsPage() {
     const navigate = useNavigate();

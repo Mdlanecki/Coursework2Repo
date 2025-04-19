@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import './WebApp.css'
 
 const Settings = () => {
     const navigate = useNavigate();
@@ -36,24 +37,36 @@ const Settings = () => {
     }
 
     return (
-        <div>
-            <h1>Settings</h1>
-            <h3>Change Password</h3>
-            <input type="password"
-                placeholder="Old Password"
-                value={oldPass}
-                onChange={(e) => setOldPass(e.target.value)}/>
-            <input type="password"
-                placeholder="New Password"
-                value={newPass}
-                onChange={(e) => setNewPass(e.target.value)}/>
-            <button onClick={handleChangePassword}>Change Password</button>
-            <p>{message}</p>
+        <div className="settingsPage">
+            <h1 className="settingsTitle">Settings</h1>
 
-            <br />
-            <button onClick={handleLogout}>
-                Log Out
-            </button>
+            <div className="settingsSection">
+                <h3 className="sectionHeader">Change Password</h3>
+                <input
+                    type="password"
+                    className="settingsInput"
+                    placeholder="Old Password"
+                    value={oldPass}
+                    onChange={(e) => setOldPass(e.target.value)}
+                />
+                <input
+                    type="password"
+                    className="settingsInput"
+                    placeholder="New Password"
+                    value={newPass}
+                    onChange={(e) => setNewPass(e.target.value)}
+                />
+                <button className="settingsButton" onClick={handleChangePassword}>
+                    Change Password
+                </button>
+                <p className="settingsMessage">{message}</p>
+            </div>
+
+            <div className="logoutSection">
+                <button className="logoutButton" onClick={handleLogout}>
+                    Log Out
+                </button>
+            </div>
         </div>
     );
 };

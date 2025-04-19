@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './WebApp.css';
 
 const GoalPage = () => {
     // Initial goals state
@@ -48,29 +49,32 @@ const GoalPage = () => {
     };
 
     return (
-        <div className="App">
-            <h1>Goal Tracker</h1>
+        <div className="goalPage">
+            <h1 className="goalTitle">Goal Tracker</h1>
 
-            <div>
+            <div className="goalInputContainer">
                 <input
+                    className="goalInput"
                     type="text"
                     value={newGoal}
                     onChange={(e) => setNewGoal(e.target.value)}
                     placeholder="Enter new goal"
                 />
-                <button onClick={addGoal}>Add Goal</button>
+                <button className="addGoalButton" onClick={addGoal}>Add Goal</button>
             </div>
 
-            <ul>
+            <ul className="goalList">
                 {goals.map(goal => (
-                    <li key={goal.id} style={{ textDecoration: goal.completed ? 'line-through' : 'none' }}>
-                        <input
-                            type="checkbox"
-                            checked={goal.completed}
-                            onChange={() => toggleGoalCompletion(goal.id)}
-                        />
-                        {goal.text}
-                        <button onClick={() => removeGoal(goal.id)}>Remove</button>
+                    <li key={goal.id} className={`goalItem ${goal.completed ? 'completed' : ''}`}>
+                        <label className="goalLabel">
+                            <input
+                                type="checkbox"
+                                checked={goal.completed}
+                                onChange={() => toggleGoalCompletion(goal.id)}
+                            />
+                            <span>{goal.text}</span>
+                        </label>
+                        <button className="removeGoalButton" onClick={() => removeGoal(goal.id)}>✕</button>
                     </li>
                 ))}
             </ul>

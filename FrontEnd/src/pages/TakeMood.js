@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import './WebApp.css';
 
 const emojis = [
     "😭", "😰", "😢", "🥲", "😐", "🙂", "😄",
@@ -45,10 +46,11 @@ const TakeMood = () => {
     };
 
     return (
-        <div>
-            <h1>Pick a Mood</h1>
+        <div className="moodPage">
+            <h1 className="moodTitle">Pick a Mood</h1>
 
             <input
+                className="moodSlider"
                 type="range"
                 min="1"
                 max="10"
@@ -58,18 +60,22 @@ const TakeMood = () => {
                 onTouchEnd={handleRelease}    // Mobile
             />
 
-            <div>
+            <div className="moodSelected">
                 Selected: {value} {emojis[value - 1]}
             </div>
 
-            <div>
-                <h3>history stored in local for now but to be changed in sprint 2:</h3>
-                <ul>
+            <div className="moodHistory">
+                <h3 className="historyTitle">
+                    Mood history (stored in localStorage for now):
+                </h3>
+                <ul className="historyList">
                     {values.length === 0 ? (
                         <li>No data yet</li>
                     ) : (
                         values.map((val, index) => (
-                            <li key={index}>#{index + 1}: {val} {emojis[val - 1]}</li>
+                            <li key={index} className="historyItem">
+                                #{index + 1}: {val} {emojis[val - 1]} — {dates[index]}
+                            </li>
                         ))
                     )}
                 </ul>

@@ -20,6 +20,7 @@ function SignUp() {
             localStorage.setItem('users', JSON.stringify(users));
             passwords.push(password);
             localStorage.setItem('passwords', JSON.stringify(passwords));
+            navigate('/TakeMood');
         }
     }
 

@@ -37,6 +37,7 @@ function SignIn() {
             <label htmlFor='password'>Password:</label>
             <input type='password' id='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
             <button type='submit' onClick={handleLogin}>Sign in</button>
+            <button type='submit' onClick={navigate("/SignUp")}>Sign up</button>
         </div>
     );
 }

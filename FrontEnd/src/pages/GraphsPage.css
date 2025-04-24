@@ -1,0 +1,40 @@
+/* GraphsPage.css */
+
+.graphs-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.graphs h1 {
+    font-size: 32px;
+    color: #fc4c02;
+    margin-bottom: 40px;
+}
+
+.graphs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.graph-card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    min-width: 300px;
+}
+
+.graph-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.graph-card .recharts-wrapper {
+    margin-top: 15px;
+    border-radius: 10px;
+}

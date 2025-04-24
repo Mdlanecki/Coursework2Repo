@@ -1,0 +1,25 @@
+.runlist-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.run-list {
+    list-style: none;
+    padding: 0;
+}
+
+.run-list li {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.run-list li:hover {
+    background: #e0e0e0;
+}

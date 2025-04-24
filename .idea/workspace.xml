@@ -4,11 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d56295ae-c88d-4252-9dc7-350f940c7521" name="Changes" comment="Leaderboard Entries">
+    <list default="true" id="d56295ae-c88d-4252-9dc7-350f940c7521" name="Changes" comment="Isaacs CSV code">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/DashboardLayout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/DashboardLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/GraphsPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/MainWindow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/ProfilePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/ProfilePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/RunDetailsPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/RunDetailsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/RunListPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/pages/RunListPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Coursework2Repo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Coursework2Repo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/stravacopy/backend/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/stravacopy/backend/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/stravacopy/backend/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/stravacopy/backend/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/stravacopy/backend/Model/Leaderboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/stravacopy/backend/Model/LeaderboardEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/stravacopy/backend/Model/Mood.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/stravacopy/backend/Repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/stravacopy/backend/Service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/pages/GraphsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/pages/GraphsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/pages/MainWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/pages/MainWindow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +42,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,6 +67,9 @@
     &quot;accountId&quot;: &quot;c2012099-c9dc-45b5-9d31-c57900c01d95&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -56,10 +86,15 @@
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "Spring Boot.BackEnd.executor": "Run",
+    "Spring Boot.Unnamed.executor": "Run",
+    "git-widget-placeholder": "FrontEnd-messing",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -70,9 +105,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,19 +117,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="BackEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.stravacopy.backend.BackEndApplication" />
-      <module name="Coursework2Repo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stravacopy.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,17 +126,18 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BackEndApplication" />
-      </list>
-    </recent_temporary>
+    <configuration name="BackEnd" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="BackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stravacopy.backend.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -138,7 +161,8 @@
       <workItem from="1745265939790" duration="6000" />
       <workItem from="1745265985268" duration="57000" />
       <workItem from="1745304703792" duration="508000" />
-      <workItem from="1745328128529" duration="1971000" />
+      <workItem from="1745328128529" duration="14986000" />
+      <workItem from="1745488018083" duration="5660000" />
     </task>
     <task id="LOCAL-00001" summary="Added RunningStats class">
       <option name="closed" value="true" />
@@ -172,7 +196,63 @@
       <option name="project" value="LOCAL" />
       <updated>1745263985665</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed DB path">
+      <option name="closed" value="true" />
+      <created>1745330607705</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745330607705</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added funtion to main controller to add a workout to a user">
+      <option name="closed" value="true" />
+      <created>1745399567450</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745399567450</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated Split so slightly more usable">
+      <option name="closed" value="true" />
+      <created>1745400191784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745400191784</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated Split so slightly more usable">
+      <option name="closed" value="true" />
+      <created>1745401427688</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745401427688</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Clarified code added earlier">
+      <option name="closed" value="true" />
+      <created>1745405655174</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745405655174</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Isaacs Split Changes">
+      <option name="closed" value="true" />
+      <created>1745414878792</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745414878792</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Isaacs CSV code">
+      <option name="closed" value="true" />
+      <created>1745415211219</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745415211219</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,17 +274,12 @@
     <MESSAGE value="Added Stat Services" />
     <MESSAGE value="Split comparisons" />
     <MESSAGE value="Leaderboard Entries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leaderboard Entries" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/stravacopy/backend/Controller/UserController.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Changed DB path" />
+    <MESSAGE value="Added funtion to main controller to add a workout to a user" />
+    <MESSAGE value="Updated Split so slightly more usable" />
+    <MESSAGE value="Clarified code added earlier" />
+    <MESSAGE value="Isaacs Split Changes" />
+    <MESSAGE value="Isaacs CSV code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Isaacs CSV code" />
   </component>
 </project>

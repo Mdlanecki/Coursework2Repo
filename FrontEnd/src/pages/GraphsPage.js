@@ -1,20 +1,43 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { LineChart, Line, XAxis, YAxis, Legend, Label, ResponsiveContainer } from 'recharts';
 import { useNavigate } from "react-router-dom";
 import './WebApp.css';
 
 function GraphsPage() {
     const navigate = useNavigate();
-
-    const options = ['Elevation',  'Max Heart Rate', 'Distance']
-    const data = [
-        { workoutNum: 1, heartRate: 200, elevation: 120, distance: 1025 },
-        { workoutNum: 2, heartRate: 175, elevation: 55,  distance: 1500 },
-        { workoutNum: 3, heartRate: 195, elevation: 175, distance: 1740 },
-        { workoutNum: 4, heartRate: 150, elevation: 20,  distance: 975  },
-        { workoutNum: 5, heartRate: 164, elevation: 60,  distance: 2000 }]
-
+    const options = ['Speed',  'Cadence', 'Altitude']
+    const [data, setData] = useState();
+    const [selectedWorkoutIndex, setSelectedWorkoutIndex] = useState(0);
     const [checkedOptions, setCheckedOptions] = useState({});
+
+    useEffect(() => {
+        const userId = localStorage.getItem("userID");
+        fetch(`http://172.26.42.147:8080/users/${userId}/workouts`)
+            .then(res => res.json())
+            .then(data => {
+                const workoutsData = data.map((workout, index) => {
+                    const speeds = workout.splits.map(split => split.speed);
+                    const altitudes = workout.splits.map(split => split.altitude);
+                    const cadences = workout.splits.map(split => split.cadence);
+
+                    return {
+                        id: workout.id || index,
+                        date: workout.date ? new Date(workout.date).toLocaleDateString() : `Workout ${index + 1}`,
+                        speeds,
+                        altitudes,
+                        cadences
+                    };
+                });
+                setData(workoutsData);
+            })
+            .catch(err => {
+                console.error("Failed to fetch workout data:", err);
+            });
+    }, []);
+
+    const handleWorkoutChange = (event) => {
+        setSelectedWorkoutIndex(event.target.value);
+    };
 
     function handleCheck(event, option) {
         const { checked } = event.target;
@@ -23,6 +46,8 @@ function GraphsPage() {
             [option]: checked,
         }));
     }
+
+    const selectedWorkout = data[selectedWorkoutIndex];
 
     return (
         <div className="graphs">
@@ -39,22 +64,35 @@ function GraphsPage() {
                     ))}
                 </div>
 
+                <div className='workoutSelect'>
+                    <h3>Select Workout:</h3>
+                    <select onChange={handleWorkoutChange} value={selectedWorkoutIndex}>
+                        {data.map((workout, index) => (
+                            <option key={workout.id} value={index}>
+                                {workout.date}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
                 <div className='graphDiv'>
                     <ResponsiveContainer width="100%" height={500} className='lineGraph'>
-                        <LineChart data = {data}>
-                            <XAxis dataKey='workoutNum'>
-                                <Label value='Workout Number' offset={-5} position='insideBottom' dy={-5} />
+                        <LineChart data={selectedWorkout ? selectedWorkout.speeds.map((_, idx) => ({
+                            workoutNum: idx + 1,
+                            speeds: selectedWorkout.speeds[idx],
+                            altitudes: selectedWorkout.altitudes[idx],
+                            cadences: selectedWorkout.cadences[idx]
+                        })) : []}>
+                            <XAxis dataKey='splitNum'>
+                                <Label value='Split number' offset={-5} position='insideBottom' dy={-5} />
                             </XAxis>
-                            <YAxis yAxisId='left'>
-                                <Label value='Heartrate (bpm), elevation (ft)' angle={-90} position='bottomLeft' dx={-20} />
-                            </YAxis>
-                            <YAxis yAxisId='right' orientation='right'>
-                                <Label value='Distance (m)' angle={-90} position='bottomright' dx={20} />
+                            <YAxis>
+                                <Label value='Speed, Altitude, Cadence' angle={-90} position='bottomLeft' dx={-20} />
                             </YAxis>
                             <Legend />
-                            {checkedOptions['Max Heart Rate'] && <Line type='Monotone' dataKey='heartRate' stroke="#FF0000" strokeWidth={2} yAxisId='left' />}
-                            {checkedOptions['Elevation'] && <Line type='Monotone' dataKey='elevation' stroke="#808080" strokeWidth={2} yAxisId='left' />}
-                            {checkedOptions['Distance'] && <Line type='Monotone' dataKey='distance' stroke="#008000" strokeWidth={2} yAxisId='right' />}
+                            {checkedOptions['Speed'] && <Line type='Monotone' dataKey='speeds' stroke="#FF0000" strokeWidth={2} />}
+                            {checkedOptions['Cadence'] && <Line type='Monotone' dataKey='cadences' stroke="#808080" strokeWidth={2} />}
+                            {checkedOptions['Altitude'] && <Line type='Monotone' dataKey='altitudes' stroke="#008000" strokeWidth={2} />}
                         </LineChart>
                     </ResponsiveContainer>
                 </div>

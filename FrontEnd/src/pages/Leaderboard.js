@@ -8,7 +8,7 @@ function Leaderboard() {
     const [leaderboards, setLeaderboards] = useState([]);
 
     useEffect(() => {
-        fetch("http://172.26.42.147:8080/users/leaderboards")  // Adjust URL if needed
+        fetch("http://172.26.42.147:8080/users/Leaderboard")  // Adjust URL if needed
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch leaderboards");

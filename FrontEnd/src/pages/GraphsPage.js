@@ -12,10 +12,10 @@ function GraphsPage() {
 
     useEffect(() => {
         const userId = localStorage.getItem("userID");
-        fetch(`http://172.26.42.147:8080/users/${userId}/workouts`)
+        fetch(`http://172.26.42.147:8080/users/${userId}/data`)
             .then(res => res.json())
             .then(data => {
-                const workoutsData = data.map((workout, index) => {
+                const workoutsData = data.workouts.map((workout, index) => {
                     const speeds = workout.splits.map(split => split.speed);
                     const altitudes = workout.splits.map(split => split.altitude);
                     const cadences = workout.splits.map(split => split.cadence);
